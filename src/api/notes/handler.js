@@ -1,6 +1,11 @@
 module.exports = class NoteHandler {
   constructor(service) {
     this._service = service;
+    this.getNotesHandler = this.getNotesHandler.bind(this);
+    this.getNoteByIdHandler = this.getNoteByIdHandler.bind(this);
+    this.postNoteHandler = this.postNoteHandler.bind(this);
+    this.putNoteByIdHandler = this.putNoteByIdHandler.bind(this);
+    this.deleteNoteByIdHandler = this.deleteNoteByIdHandler.bind(this);
   }
 
   getNotesHandler() {
@@ -103,6 +108,5 @@ module.exports = class NoteHandler {
       response.code(404);
       return response;
     }
-
   }
 }

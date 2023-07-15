@@ -2,12 +2,12 @@ const routes = (handler) => [
   {
     method: 'GET',
     path: '/notes',
-    handler: handler.getAllNotesHandler,
+    handler: handler.getNotesHandler,
   },
   {
     method: 'POST',
     path: '/notes',
-    handler: handler.addNoteHandler,
+    handler: handler.postNoteHandler,
   },
   {
     method: 'GET',
@@ -17,7 +17,7 @@ const routes = (handler) => [
   {
     method: 'PUT',
     path: '/notes/{id}',
-    handler: handler.editNoteByIdHandler,
+    handler: handler.putNoteByIdHandler,
   },
   {
     method: 'DELETE',
